@@ -1,0 +1,22 @@
+
+
+
+<div class="box">
+
+    <div *ngFor="let info of itemDetails | keyvalue">
+          <span class="active" >
+            {{info.key}}
+          </span> :
+
+          <span >
+            {{info.value}}
+          </span>
+
+    </div>
+
+
+
+  <div class="pagination">
+    <span class="btn back" [routerLink]="['/',categoryName]" > Back</span>
+  </div>
+</div>

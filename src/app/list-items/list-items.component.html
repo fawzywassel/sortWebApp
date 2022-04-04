@@ -1,0 +1,36 @@
+<div class="itemsList box" >
+  <ul>
+    <li *ngFor="let categoryItem of itemsList ">
+      <span *ngIf="categoryName === 'films'">{{categoryItem?.title}} / {{categoryItem?.director}} / {{categoryItem?.release_date}}
+        <a (click)="showDetails(categoryItem)" href="javascript:void(0)">More Details</a>
+      </span>
+
+      <span *ngIf="categoryName === 'people'"> {{categoryItem?.homeworldValue}} / {{categoryItem?.name}} / {{checkNumberRange(categoryItem?.height,heightRanges,heightValues )}}
+
+
+          <a (click)="showDetails(categoryItem)" href="javascript:void(0)">More Details</a>
+      </span>
+
+      <span *ngIf="categoryName === 'planets'">{{categoryItem?.name}}  / {{categoryItem?.climate}}
+        <a (click)="showDetails(categoryItem)" href="javascript:void(0)">More Details</a>
+      </span>
+
+      <span *ngIf="categoryName === 'species'">{{categoryItem?.name}} / {{categoryItem?.classification}}
+        <a (click)="showDetails(categoryItem)" href="javascript:void(0)">More Details</a>
+      </span>
+
+      <span *ngIf="categoryName === 'starships'">{{categoryItem?.name}} / {{checkNumberRange(categoryItem?.length,lengthRanges,lengthValues )}}
+        <a (click)="showDetails(categoryItem)" href="javascript:void(0)">More Details</a>
+      </span>
+
+      <span *ngIf="categoryName === 'vehicles'">{{categoryItem?.name}} / {{categoryItem?.director}}
+        <a (click)="showDetails(categoryItem)" href="javascript:void(0)">More Details</a>
+      </span>
+    </li>
+  </ul>
+
+  <div class="pagination">
+    <span class="btn previous" (click)="paginateData('previous')" *ngIf="previousUrl !== null">Previous</span>
+    <span class="btn next" (click)="paginateData('next')" *ngIf="nextUrl !== null">Next</span>
+  </div>
+</div>

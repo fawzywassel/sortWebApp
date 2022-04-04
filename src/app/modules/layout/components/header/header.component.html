@@ -1,0 +1,25 @@
+<div class="topnav">
+  <div class="box">
+    <span class="searchText" *ngFor="let s of searchHistoryList" (click)="search(s,true)" >{{s}}</span>
+  </div>
+  <div class="search-container">
+    <form [formGroup]="searchForm"  (ngSubmit)="search(searchForm.value.search)" >
+      <input type="text" placeholder="Search.." name="search" formControlName="search">
+      <button [disabled]="searchForm.invalid" >Search</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="menu box">
+  <span *ngFor="let item of links " class="menuItem" [routerLink]="[item]" routerLinkActive="active" (click)="categoryName=item"  >
+    {{item}}
+  </span>
+</div>
+
+
+
+
+
+
+

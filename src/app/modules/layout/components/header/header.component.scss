@@ -1,0 +1,22 @@
+.searchText{
+  margin-inline-end: 10px;
+}
+
+.topnav{
+  display: flex;
+  justify-content: space-between;
+}
+
+input{
+  border: 1px solid #e2e2e2;
+  padding: 10px 15px;
+  margin: 5px;
+  width: 230px;
+}
+
+button{
+  background: #3d468e;
+  color: #fff;
+  border: 0px;
+  padding: 10px 14px;
+}
